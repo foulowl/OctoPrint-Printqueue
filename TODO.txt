@@ -1,5 +1,6 @@
-[ ] Add button to row of five buttons that are grouped with each file. This button shall have the graphic "+" or "Q". This button adds the filename to the bottom of the queue. Remember, files can be queued more than once, for example if someone wants to print something 
+[ ] Add way to add files. Injecting a button into the file list likely won't work.
 [ ] "Print all" starts the printing process. This needs to be implemented. Items print from top to bottom of select element. When an item has finished printing, the following steps happen:
  * Print queue plugin subtracts the last printed item's volume from the volume remaining.
  * Print queue plugin checks the volume of the next print. If this volume is less than the volume remaining, it starts the next print. Otherwise, it stops printing entirely.
 [ ] "Change spool" button should produce a pop up. This pop up provides an html input that is prefilled with the current filament value. The user can then change this as desired.
+[ ] Split filament counter into separate plugin?

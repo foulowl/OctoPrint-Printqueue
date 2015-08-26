@@ -10,14 +10,39 @@ from __future__ import absolute_import
 
 import octoprint.plugin
 
+import flask
+
 class PrintqueuePlugin(octoprint.plugin.StartupPlugin,
                        octoprint.plugin.TemplatePlugin,
                        octoprint.plugin.SettingsPlugin,
-                       octoprint.plugin.AssetPlugin):
+                       octoprint.plugin.AssetPlugin,
+											 octoprint.plugin.SimpleApiPlugin):
+
+
 	def get_assets(self):
 		return dict(
 			js=["js/printqueue.js"]
 		)
+
+	def get_api_commands(self):
+		return dict(
+			load_queue=[],
+			save_queue=[]
+		)
+	
+	def on_api_command(self, command, data):
+		import flask
+		if command == "load_queue":
+			parameter = "unset"
+			if "parameter" in data:
+				parameter = "set"
+			self._logger.info("load_queue called, parameter is {parameter}".format(**locals()))
+		elif command == "save_queue":
+			self._logger.info("save_queue called, some_parameter is {some_parameter}".format(**data))
+
+	def on_api_get(self, request):
+		return flask.jsonify(foo="bar")
+
 
 __plugin_name__ = "Print Queue"
 

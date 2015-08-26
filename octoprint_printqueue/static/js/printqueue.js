@@ -24,13 +24,29 @@ $(function() {
 				};
 
 				self.print_all = function() {
-
 				};
 
 				self.change_spool = function() {
 
 				};
 
+				self.save_queue = function() {
+					 $.ajax({
+						url: API_BASEURL,
+						type: "POST",
+						dataType: "json",
+						data: "\"command\": \"save_queue\""
+					});
+				};
+
+				self.load_queue = function() {
+					 $.ajax({
+						url: API_BASEURL,
+						type: "POST",
+						dataType: "json",
+						data: "\"command\": \"load_queue\""
+					});
+				};
 		}
 
 	var swapVar = '';
