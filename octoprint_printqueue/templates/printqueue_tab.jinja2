@@ -1,0 +1,26 @@
+
+<div id="queue_elements" align="center">
+
+	<font color="red">	
+		<b> ALL ITEMS IN QUEUE MUST BE ABLE TO EJECT THEMSELVES FROM THE PRINT BED.<b>
+		<b> DO NOT ATTEMPT TO USE THIS QUEUE UNLESS YOU KNOW WHAT YOU ARE DOING.<b>
+		<b> YOU HAVE BEEN WARNED!! <b>
+	</font>
+
+	<select name="queuedfiles" style="width: 95%" size="20">
+	</select>
+
+	<div id="queue_buttons">
+		<button data-bind="click: move_up">{{ _('Move up') }}</button>
+		<button data-bind="click: move_down">{{ _('Move down') }}</button>
+		<button data-bind="click: remove">{{ _('Remove') }}</button>
+		<button data-bind="click: print_all">{{ _('Print all') }}</button>
+	</div>
+	<br>
+	<div id="filament_elements">
+		<button data-bind="click: change_spool">{{ _('Change spool') }}</button>
+		<br>
+		<b>Filament remaining: 1000 cm^3</b>
+	</div>
+
+</div>

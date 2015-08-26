@@ -1,0 +1,8 @@
+[ ] Add button to row of five buttons that are grouped with each file. This button shall have the graphic "+" or "Q". This button adds the filename to the bottom of the queue. Remember, files can be queued more than once, for example if someone wants to print something 
+[ ] "Move up" button moves the file up in the queue. This needs to be implemented.
+[ ] "Move down" button moves the file down in the queue. This needs to be implemented. 
+[ ] "Remove" button removes the file from the queue entirely. This needs to be implemented. 
+[ ] "Print all" starts the printing process. This needs to be implemented. Items print from top to bottom of select element. When an item has finished printing, the following steps happen:
+ * Print queue plugin subtracts the last printed item's volume from the volume remaining.
+ * Print queue plugin checks the volume of the next print. If this volume is less than the volume remaining, it starts the next print. Otherwise, it stops printing entirely.
+[ ] "Change spool" button should produce a pop up. This pop up provides an html input that is prefilled with the current filament value. The user can then change this as desired.
