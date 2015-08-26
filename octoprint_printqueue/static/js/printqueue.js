@@ -22,7 +22,7 @@ $(function() {
 
 				};
 
-
+		}
 
     // This is how our plugin registers itself with the application, by adding some configuration
     // information to the global variable OCTOPRINT_VIEWMODELS
