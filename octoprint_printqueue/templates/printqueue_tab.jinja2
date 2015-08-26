@@ -8,19 +8,23 @@
 	</font>
 
 	<select name="queuedfiles" style="width: 95%" size="20">
+		<option value="test_01.gcode">test_01.gcode</option>	
+		<option value="test_02.gcode">test_02.gcode</option>	
+		<option value="test_03.gcode">test_03.gcode</option>	
+		<option value="test_04.gcode">test_04.gcode</option>	
 	</select>
 
 	<div id="queue_buttons">
-		<button data-bind="click: move_up">{{ _('Move up') }}</button>
-		<button data-bind="click: move_down">{{ _('Move down') }}</button>
-		<button data-bind="click: remove">{{ _('Remove') }}</button>
-		<button data-bind="click: print_all">{{ _('Print all') }}</button>
+		<button class="btn btn.span4" data-bind="click: move_up">{{ _('Move up') }}</button>
+		<button class="btn btn.span4" data-bind="click: move_down">{{ _('Move down') }}</button>
+		<button class="btn btn.span4" data-bind="click: remove">{{ _('Remove') }}</button>
+		<button class="btn btn.span4" data-bind="click: print_all">{{ _('Print all') }}</button>
 	</div>
-	<br>
+	<br><br>
 	<div id="filament_elements">
-		<button data-bind="click: change_spool">{{ _('Change spool') }}</button>
+		<button class="btn btn.span4" data-bind="click: change_spool">{{ _('Change spool') }}</button>
 		<br>
-		<b>Filament remaining: 1000 cm^3</b>
+		Filament remaining: <b>1000 cm^3</b>
 	</div>
 
 </div>
